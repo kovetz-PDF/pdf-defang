@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+title: "pdf-defang"
+message: "If you use this library, please cite it as below."
+type: software
+authors:
+  - name: "kovetz.co.il"
+    email: "contact@kovetz.co.il"
+    website: "https://kovetz.co.il"
+repository-code: "https://github.com/kovetz-PDF/pdf-defang"
+url: "https://kovetz-pdf.github.io/pdf-defang/"
+license: MIT
+keywords:
+  - pdf
+  - security
+  - sanitization
+  - javascript
+  - malware
+  - python
+abstract: >-
+  A lightweight Python library that strips JavaScript, OpenAction, Launch
+  actions, embedded files, XFA forms, dangerous URI schemes, and other
+  active content from PDFs. Built on top of pikepdf. Two sanitization
+  levels (strict and balanced) support both untrusted-source and trusted
+  form-preserving workflows. Originally extracted from production code
+  defending against malicious PDF uploads.
+version: "0.1.0"
+date-released: "2026-05-18"

@@ -6,7 +6,12 @@
 
 [![PyPI](https://img.shields.io/pypi/v/pdf-defang.svg)](https://pypi.org/project/pdf-defang/)
 [![Python](https://img.shields.io/pypi/pyversions/pdf-defang.svg)](https://pypi.org/project/pdf-defang/)
+[![Downloads](https://static.pepy.tech/badge/pdf-defang/month)](https://pepy.tech/project/pdf-defang)
+[![CI](https://github.com/kovetz-PDF/pdf-defang/actions/workflows/ci.yml/badge.svg)](https://github.com/kovetz-PDF/pdf-defang/actions/workflows/ci.yml)
+[![Docs](https://github.com/kovetz-PDF/pdf-defang/actions/workflows/docs.yml/badge.svg)](https://kovetz-pdf.github.io/pdf-defang/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![mypy](https://img.shields.io/badge/mypy-strict-blue.svg)](https://mypy.readthedocs.io/)
+[![Ruff](https://img.shields.io/badge/ruff-clean-success.svg)](https://github.com/astral-sh/ruff)
 
 ---
 
