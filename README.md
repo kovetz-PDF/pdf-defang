@@ -13,6 +13,8 @@
 [![mypy](https://img.shields.io/badge/mypy-strict-blue.svg)](https://mypy.readthedocs.io/)
 [![Ruff](https://img.shields.io/badge/ruff-clean-success.svg)](https://github.com/astral-sh/ruff)
 
+**📚 [Full documentation](https://kovetz-pdf.github.io/pdf-defang/)** | **📦 [PyPI](https://pypi.org/project/pdf-defang/)** | **🛠️ Built by [kovetz.co.il](https://kovetz.co.il)**
+
 ---
 
 ## Why?
