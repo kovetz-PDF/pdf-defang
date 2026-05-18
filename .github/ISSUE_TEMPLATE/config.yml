@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/kovetz-PDF/pdf-defang/security/advisories/new
+    about: For security issues - or email contact@kovetz.co.il - never file as a public issue
+  - name: General question
+    url: https://github.com/kovetz-PDF/pdf-defang/discussions
+    about: Use GitHub Discussions for questions about usage

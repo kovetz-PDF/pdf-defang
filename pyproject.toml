@@ -1,0 +1,71 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdf-defang"
+version = "0.1.0"
+description = "Strip JavaScript, OpenAction, Launch actions and other active content from PDFs. Lightweight Python library."
+authors = [{ name = "kovetz.co.il", email = "contact@kovetz.co.il" }]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["pikepdf>=8.0,<10.0"]
+keywords = [
+    "pdf",
+    "security",
+    "sanitize",
+    "sanitizer",
+    "defang",
+    "javascript",
+    "malware",
+    "pikepdf",
+    "openaction",
+    "active-content",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: System Administrators",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Security",
+    "Topic :: Office/Business",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://kovetz.co.il"
+Repository = "https://github.com/kovetz-PDF/pdf-defang"
+Issues = "https://github.com/kovetz-PDF/pdf-defang/issues"
+Changelog = "https://github.com/kovetz-PDF/pdf-defang/blob/main/CHANGELOG.md"
+
+[project.scripts]
+pdf-defang = "pdf_defang.cli:main"
+
+[project.optional-dependencies]
+test = ["pytest>=7.0", "pytest-cov>=4.0", "pytest-asyncio>=0.23"]
+docs = ["mkdocs-material>=9.5"]
+
+[tool.setuptools.packages.find]
+include = ["pdf_defang*"]
+exclude = ["tests*"]
+
+[tool.setuptools.package-data]
+pdf_defang = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --tb=short"
+asyncio_mode = "auto"
+markers = [
+    "benchmark: Performance timing tests (not pass/fail, for regression detection)",
+]
