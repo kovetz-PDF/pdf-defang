@@ -23,7 +23,7 @@ from ._bytes import sanitize_bytes, scan_bytes
 from ._core import Level, SanitizeReport, sanitize
 from ._scan import ScanReport, scan
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 __all__ = [
     "sanitize",
     "scan",

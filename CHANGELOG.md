@@ -5,6 +5,15 @@ All notable changes to `pdf-defang` will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.2] - 2026-05-21
+
+### Fixed
+
+- `__version__` now matches `pyproject.toml` (was `"0.1.0"` after 0.1.1 release)
+- `sanitize()` now emits `RuntimeWarning` on unexpected failures so callers without a log handler see the error
+- Replaced `# type: ignore[arg-type]` on `pikepdf.Encryption(R=...)` with `cast("Literal[2,3,4,5,6]", revision)`
+- Removed internal origin comment from `_core.py` module docstring
+
 ## [0.1.1] - 2026-05-21
 
 ### Changed
