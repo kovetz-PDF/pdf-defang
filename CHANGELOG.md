@@ -5,6 +5,14 @@ All notable changes to `pdf-defang` will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.1] - 2026-05-21
+
+### Changed
+
+- Improved PyPI description to highlight the primary use case: sanitizing user-uploaded PDFs in web applications
+- Expanded keywords to include `upload-security`, `user-upload`, `strip-javascript`, `malicious-pdf`, `pdf-sanitization`, `appsec`, `web-security`, `file-upload-security`
+- Replaced `Topic :: Office/Business` classifier with `Topic :: Internet :: WWW/HTTP` and `Topic :: Software Development :: Libraries :: Python Modules`
+
 ## [0.1.0] - 2026-05-18
 
 Initial release.
