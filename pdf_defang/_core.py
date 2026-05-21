@@ -2,18 +2,14 @@
 Core sanitization logic. Removes embedded JavaScript, automatic actions,
 launch actions, embedded files, XFA forms and other active content from
 a PDF in place.
-
-Originally written for kovetz.co.il in May 2026 as a defense against
-malicious PDF uploads during an APT scanning campaign. Extracted here as
-a standalone library so other developers don't have to rewrite the same
-67 lines of pikepdf code.
 """
 from __future__ import annotations
 
 import logging
 import os
+import warnings
 from dataclasses import dataclass, field
-from typing import Any, Literal, overload
+from typing import Any, Literal, cast, overload
 
 import pikepdf
 
@@ -215,6 +211,11 @@ def sanitize(
     except Exception as e:
         report.error = f"{type(e).__name__}: {e}"
         logger.warning("PDF sanitization failed for %s: %s", _basename(pdf_path), e)
+        warnings.warn(
+            f"pdf-defang: sanitization failed for {_basename(pdf_path)}: {e}",
+            RuntimeWarning,
+            stacklevel=2,
+        )
         return report if return_report else False
 
     return report if return_report else True
@@ -422,7 +423,7 @@ def _preserve_encryption(pdf: Any, password: str | None) -> Any:
         return pikepdf.Encryption(
             owner=password,
             user=password,
-            R=revision,  # type: ignore[arg-type]
+            R=cast("Literal[2, 3, 4, 5, 6]", revision),
         )
     except Exception:
         return pikepdf.Encryption(owner=password, user=password, R=4)
