@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "pdf-defang"
 version = "0.1.0"
-description = "Strip JavaScript, OpenAction, Launch actions and other active content from PDFs. Lightweight Python library."
+description = "Sanitize user-uploaded PDFs by removing JavaScript, OpenAction, Launch and other active content. Drop-in Python library for web applications that accept PDF uploads."
 authors = [{ name = "kovetz.co.il", email = "contact@kovetz.co.il" }]
 license = "MIT"
 readme = "README.md"
@@ -22,6 +22,14 @@ keywords = [
     "pikepdf",
     "openaction",
     "active-content",
+    "upload-security",
+    "user-upload",
+    "strip-javascript",
+    "malicious-pdf",
+    "pdf-sanitization",
+    "appsec",
+    "web-security",
+    "file-upload-security",
 ]
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -36,7 +44,8 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
     "Topic :: Security",
-    "Topic :: Office/Business",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development :: Libraries :: Python Modules",
     "Topic :: Utilities",
     "Typing :: Typed",
 ]
