@@ -10,7 +10,7 @@ authors = [{ name = "kovetz.co.il", email = "contact@kovetz.co.il" }]
 license = "MIT"
 readme = "README.md"
 requires-python = ">=3.9"
-dependencies = ["pikepdf>=8.0,<10.0"]
+dependencies = ["pikepdf>=8.0,<11.0"]
 keywords = [
     "pdf",
     "security",
